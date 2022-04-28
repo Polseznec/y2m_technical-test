@@ -1,0 +1,19 @@
+@import "../variables";
+
+.button {
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid $primaryDark2Color;
+  color: $primaryDark2Color;
+  background: none;
+  text-decoration: none;
+  margin: 1rem;
+  transition: ease-in-out 0.1s;
+  font-weight: bold;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $actionColor;
+    border-color: $actionColor;
+  }
+}

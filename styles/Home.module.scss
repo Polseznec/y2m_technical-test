@@ -1,0 +1,36 @@
+@import "./variables";
+
+.container {
+  background-color: $secondaryLight1Color;
+}
+
+.main {
+  height: calc(100vh - $heightFooter);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  height: $heightFooter;
+  justify-content: center;
+  align-items: center;
+  background-color: #0070f3;
+  z-index: 1000;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

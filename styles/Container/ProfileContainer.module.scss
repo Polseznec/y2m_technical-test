@@ -1,0 +1,13 @@
+@import "../variables";
+
+.profileContainer {
+  background-color: red;
+  min-width: 50vw;
+  height: 100%;
+
+  padding: 4rem;
+  & img {
+    width: 7rem;
+    border: 2px solid;
+  }
+}

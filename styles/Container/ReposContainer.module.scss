@@ -1,0 +1,10 @@
+@import "../variables";
+
+.ReposContainer {
+  background-color: yellow;
+  min-width: 50vw;
+  height: 100%;
+  padding: 4rem;
+
+  overflow: scroll;
+}
