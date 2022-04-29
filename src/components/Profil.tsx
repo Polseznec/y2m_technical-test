@@ -40,7 +40,6 @@ export default function Profil({ data, isLoading }) {
           <h1>Hum...</h1>
           <h1>il y a un problème</h1>
           <span>To many api call ...</span>
-
           <span>Please, Try later </span>
         </div>
       )}
