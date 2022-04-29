@@ -6,7 +6,6 @@ import { useSession, signIn } from "next-auth/react";
 //components
 import Footer from "../src/components/Navigation/Footer";
 import Profil from "../src/components/Profil";
-import Loader from "../src/components/Ui/Loader";
 import { Button } from "../src/components/Ui/Buttons";
 
 function Home() {
@@ -46,15 +45,16 @@ function Home() {
       <main className={styles.main}>
         {!session && (
           <>
-            <div>
+            <div className={styles.home_card}>
+              <h1>GitHub</h1>
               <span>Connection via Github</span>
+              <Button
+                onClick={() => {
+                  signIn("github");
+                }}
+                text={"Connection"}
+              />
             </div>
-            <Button
-              onClick={() => {
-                signIn();
-              }}
-              text={"Sign In with Github"}
-            />
           </>
         )}
         {session && <Profil data={GIT_HUB_DATA} isLoading={isLoading} />}
