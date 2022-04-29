@@ -8,3 +8,11 @@ export const Button = ({ onClick, text }) => {
     </button>
   );
 };
+
+export const ButtonSecondary = ({ onClick, text }) => {
+  return (
+    <button className={styles.button_secondary} onClick={onClick}>
+      {text}
+    </button>
+  );
+};

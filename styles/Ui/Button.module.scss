@@ -17,3 +17,21 @@
     border-color: $actionColor;
   }
 }
+.button_secondary {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  color: $secondaryLight1Color;
+  background: none;
+  text-decoration: none;
+  margin: 1rem;
+  transition: ease-in-out 0.1s;
+  font-weight: bold;
+  font-size: 1.2rem;
+  &:hover,
+  &:focus,
+  &:active {
+    color: lightgray;
+    border-color: lightgray;
+  }
+}

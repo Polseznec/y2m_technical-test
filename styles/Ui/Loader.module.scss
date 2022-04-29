@@ -5,8 +5,8 @@
   position: relative;
   width: 80px;
   height: 80px;
-  background-color: $primaryLight2Color;
-  border-radius: 50%;
+  background-color: $actionColor;
+  border-radius: 1rem;
   animation: blinking 2.4s infinite;
   div {
     position: absolute;
@@ -14,7 +14,7 @@
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: $primaryDark2Color;
+    background: $secondaryLight1Color;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
   div:nth-child(1) {

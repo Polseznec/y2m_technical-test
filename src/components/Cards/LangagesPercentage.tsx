@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 function LangagesPercentage({ data }) {
   const [langData, setLangData] = useState([]);
 
-  console.log("from langPerCent", data);
+  //console.log("from langPerCent", data);
 
   useEffect(() => {
     fetch(data.languages_url)

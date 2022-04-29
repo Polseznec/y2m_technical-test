@@ -9,15 +9,22 @@ export default function RepoCard({ repo }) {
       <a href={repo.html_url} target="_blank">
         <span>{repo.full_name}</span>
       </a>
-      <br />
-      <span>Stars : {repo.stargazers_count}</span>
-      <br />
-      <span>Watchers : {repo.watchers}</span>
-      <br />
-      <span>Nombre d'issues ouvertes : {repo.open_issues_count}</span>
-      <br />
+      <div>
+        <div>
+          <span>
+            Stars : <p>{repo.stargazers_count}</p>
+          </span>
+          <span>
+            Watchers :<p>{repo.watchers}</p>
+          </span>
+        </div>
+        <div>
+          <span>
+            Nombre d'issues ouvertes : <p>{repo.open_issues_count}</p>
+          </span>
+        </div>
+      </div>
       <LangagesPercentage data={repo} />
-      <br />
     </div>
   );
 }

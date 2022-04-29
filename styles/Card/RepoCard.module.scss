@@ -1,5 +1,67 @@
 @import "../variables";
 
+$fontSize: 1rem;
+
 .cardContainer {
-  border: 1px solid;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  background-color: $cardBackgroundColor;
+  box-shadow: $cardShadow;
+  font-size: $fontSize;
+  color: grey;
+  div {
+    margin-top: 0.3rem;
+  }
+  a {
+    color: $actionColor;
+    font-size: 1.2rem;
+    height: auto;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    div:nth-child(1) {
+      height: $fontSize;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 3rem;
+      span:nth-child(2) {
+        margin-left: 30px;
+      }
+    }
+    div:nth-child(2) {
+      height: $fontSize;
+      width: 100%;
+      display: flex;
+      padding-bottom: 1rem;
+
+      span {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+  div:nth-child(3) {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  span {
+    display: flex;
+    align-items: center;
+
+    height: $fontSize;
+  }
+  p {
+    margin-left: 3px;
+    color: $actionColor;
+  }
 }

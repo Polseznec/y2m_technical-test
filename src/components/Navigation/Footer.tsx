@@ -4,18 +4,18 @@ import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
 
 //components
-import { Button } from "../Ui/Buttons";
+import { ButtonSecondary } from "../Ui/Buttons";
 
 const Footer = () => {
   const { data: session } = useSession();
   return (
     <footer className={styles.footer}>
       {session && (
-        <Button
+        <ButtonSecondary
           onClick={() => {
             signOut();
           }}
-          text={`Sign out ${session.user.name}`}
+          text={`Log out 🖖`}
         />
       )}
     </footer>

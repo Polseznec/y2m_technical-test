@@ -1,7 +1,7 @@
 @import "./variables";
 
 .container {
-  background-color: $secondaryLight1Color;
+  background-color: $mainBackgroundColor;
 }
 
 .main {
@@ -10,14 +10,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+}
+.home_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 1rem;
+  background-color: $cardBackgroundColor;
+  box-shadow: $cardShadow;
+  h1 {
+    color: $actionColor;
+  }
+  p {
+    font-size: 8rem;
+    margin: 0;
+  }
 }
 
 .footer {
+  display: flex;
   height: $heightFooter;
   justify-content: center;
   align-items: center;
-  background-color: #0070f3;
+  background-color: $actionColor;
   z-index: 1000;
+  box-shadow: 0px 0px 0px #888, 0px -1px 6px rgb(185, 185, 185);
 }
 
 .grid {
