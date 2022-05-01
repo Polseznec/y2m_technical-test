@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
+//style
+import styles from "../../../styles/Card/LangCard.module.scss";
+//type
+import { repoList } from "../../Types/Props";
 
-function LangagesPercentage({ data }) {
+function LangagesPercentage({ repo }: { repo: repoList }) {
   const [langData, setLangData] = useState([]);
 
   useEffect(() => {
-    fetch(data.languages_url)
+    fetch(repo.languages_url)
       .then((res) => res.json())
       .then(setLangData);
   }, []);
@@ -25,16 +29,16 @@ function LangagesPercentage({ data }) {
 
   const langMapping = Object.entries(getLangInPerCent).map(([key, value]) => {
     return (
-      <span>
-        {key} : {value}
-      </span>
+      <p>
+        {key} : {value}%
+      </p>
     );
   });
 
   return (
-    <div>
-      <span>Langue utilisé</span>
-      <div>{langMapping}</div>
+    <div className={styles.langContainer}>
+      <span>Technologie</span>
+      <span>{langMapping}</span>
     </div>
   );
 }

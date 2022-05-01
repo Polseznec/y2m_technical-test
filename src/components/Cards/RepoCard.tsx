@@ -1,9 +1,9 @@
 import styles from "../../../styles/Card/RepoCard.module.scss";
 import LangagesPercentage from "./LangagesPercentage";
+//type
+import { repoList } from "../../Types/Props";
 
-export default function RepoCard({ repo }) {
-  // console.log(repo);
-
+export default function RepoCard({ repo }: { repo: repoList }) {
   return (
     <div className={styles.cardContainer}>
       <a href={repo.html_url} target="_blank">
@@ -24,7 +24,7 @@ export default function RepoCard({ repo }) {
           </span>
         </div>
       </div>
-      <LangagesPercentage data={repo} />
+      <LangagesPercentage repo={repo} />
     </div>
   );
 }

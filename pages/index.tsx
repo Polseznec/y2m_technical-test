@@ -1,18 +1,19 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-//import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import { useSession, signIn } from "next-auth/react";
 //components
 import Footer from "../src/components/Navigation/Footer";
 import Profil from "../src/components/Profil";
 import { Button } from "../src/components/Ui/Buttons";
+//type
+import { gitDataList } from "../src/Types/Props";
 
 function Home() {
   const { data: session } = useSession();
-  const [profil, setProfil] = useState({});
-  const GIT_HUB_DATA = [{ profil: profil }, { session: session }];
-  const [isLoading, setLoading] = useState(false);
+  const [profil, setProfil] = useState<Object>({});
+  const GIT_HUB_DATA: gitDataList = [{ profil: profil }, { session: session }];
+  const [isLoading, setLoading] = useState<Boolean>(false);
 
   const getData = async () => {
     setLoading(true);
@@ -32,8 +33,6 @@ function Home() {
     }
   }, [session]);
 
-  console.log("GIT_HUB_DATA", GIT_HUB_DATA);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -46,8 +45,8 @@ function Home() {
         {!session && (
           <>
             <div className={styles.home_card}>
-              <h1>GitHub</h1>
-              <span>Connection via Github</span>
+              <h1>GitHub Repo Displayer</h1>
+
               <Button
                 onClick={() => {
                   signIn("github");

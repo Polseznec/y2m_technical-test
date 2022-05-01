@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/Container/ReposContainer.module.scss";
 import RepoCard from "./Cards/RepoCard";
+//type
+import { profilList } from "../Types/Props";
 
-export default function Repos({ profil }) {
-  const [repos, setRepos] = useState([]);
-  console.log("repos", repos.message);
+export default function Repos({ profil }: { profil: profilList }) {
+  const [repos, setRepos] = useState<any>([]);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${profil.login}/repos`)
@@ -15,7 +16,7 @@ export default function Repos({ profil }) {
   return (
     <div className={styles.ReposContainer}>
       <>
-        {repos.map((repo, key) => (
+        {repos.map((repo: object, key: number) => (
           <RepoCard repo={repo} key={key} />
         ))}
       </>
