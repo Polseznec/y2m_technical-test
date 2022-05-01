@@ -24,6 +24,7 @@
   border-radius: 1rem;
   background-color: $cardBackgroundColor;
   box-shadow: $cardShadow;
+  animation: opacity 3s ease-in-out;
   h1 {
     color: $actionColor;
   }

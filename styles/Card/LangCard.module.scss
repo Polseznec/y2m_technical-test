@@ -1,0 +1,22 @@
+@import "../variables";
+
+.langContainer {
+  background-color: $mainBackgroundColor;
+  border-radius: 1rem;
+  color: $actionColor;
+  span:nth-child(1) {
+    text-decoration: underline;
+  }
+  span:nth-child(2) {
+    height: auto;
+
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    font-size: 0.8rem;
+    p {
+      padding: 5px;
+      margin: 0;
+    }
+  }
+}
