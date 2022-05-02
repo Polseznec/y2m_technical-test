@@ -15,7 +15,7 @@ const Footer = () => {
           onClick={() => {
             signOut();
           }}
-          text={`Log out 🖖`}
+          text={`Déconnection 🖖`}
         />
       )}
     </footer>
